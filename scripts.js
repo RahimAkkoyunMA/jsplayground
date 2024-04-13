@@ -9,4 +9,16 @@ function testfunction()
 window.onload = function()
 {
     testfunction();
+    console.log("From onload");
 }
+
+function erstelleZaehler() {
+    let zaehler = 0;
+
+    return function() {
+        zaehler += 1;
+        return zaehler;
+    };
+}
+
+let meinZaehler = erstelleZaehler();
